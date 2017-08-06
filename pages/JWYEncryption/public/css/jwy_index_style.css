@@ -1,0 +1,29 @@
+hr {
+    margin-bottom: 30px;
+}
+
+.page {
+    text-align: center;
+    color: #555;
+}
+
+li {
+    list-style:none;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+h2 {
+    display: inline-block;
+    border-bottom: 2px solid #555;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+.span-1-of-3 {
+    
+}

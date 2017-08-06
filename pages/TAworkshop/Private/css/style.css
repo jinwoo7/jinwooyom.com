@@ -1,0 +1,463 @@
+/* ++++++++++++++++++++++++++ */
+/* +++++ General Setup ++++++ */
+/* ++++++++++++++++++++++++++ */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #fcfcfc;
+    color: #343434;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering:optimizeLegibility;
+}
+
+/* ++++++++++++++++++++++++++ */
+/* +++ Reusable Components ++ */
+/* ++++++++++++++++++++++++++ */
+.row {
+    max-width: 1140px;
+    /* up-down 0px, right-left auto */
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+    color: #fff;
+}
+
+h1 {
+    font-size: 600%;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+h2 {
+    font-size: 200%;
+    margin-bottom: 20px;
+}
+
+h3 {
+    display: inline-block;
+    margin: 50px auto 10px auto;
+    padding-bottom: 20px;
+    font-size: 300%;
+    border-bottom: 3px solid #CA6924;
+}
+
+h4 {
+    font-size: 200%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+section .heading {
+    text-align: center;
+}
+
+.long-text {
+    margin: 0px auto;
+    font-size: 110%;
+    width: 70%;
+}
+
+.main_background {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* ************ Empty Bar *********** */
+.emptyBar {
+    background-size: cover;
+    background-position: center;
+    background-attachment:scroll;
+}
+
+/* ************ Nav Bar ************ */
+.navbar-inverse {
+    background-color: rgba(0, 0, 0, 0.80);
+}
+
+.navbar-brand {
+    padding: 0px;
+    margin: 0px 20px;
+}
+
+.navbar-brand img {
+    margin-top: 5px;
+    height: 40px;
+}
+
+.navbar-nav,
+.social-links {
+    margin: 0px auto;
+    text-align: center;
+}
+
+#brand {
+    margin: auto;
+    padding-top: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    float: left;
+}
+
+.navbar-right {
+    width: 165px;
+}
+
+.navbar-right li {
+    display: block;
+}
+
+/* ************* Icons ************* */
+.icon-big {
+    font-size: 600%;
+    display: block;
+    color: #343434;
+    text-align: center;
+}
+
+.icon-small {
+    margin: 0px 15px;
+}
+
+/* ************ Buttons ************ */
+.jwy_btn:link,
+.jwy_btn:visited,
+input[type=submit] {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 200px;
+    color: #fff;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.jwy_btn:hover,
+.jwy_btn:active {
+    background-color: #763e8d;
+}
+
+.jwy_btn-full:link,
+.jwy_btn-full:visited,
+input[type=submit] {
+    background-color: #CA6924;
+    border: 2px solid #CA6924;
+    margin-right: 20px;
+}
+
+.jwy_btn-ghost:link,
+.jwy_btn-ghost:visited {
+    border: 2px solid #CA6924;
+    color: #CA6924;
+}
+
+/* Buttons: hover & active */
+.jwy_btn:hover,
+.jwy_btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #6c3981;
+    border: 2px solid #6c3981;
+}
+
+.jwy_btn-ghost:hover,
+.jwy_btn-ghost:active {
+    background-color: rgba(255, 255, 255, 0.35);
+    border: 2px solid #6c3981;
+    color: #6c3981;
+}
+
+/* ++++++++++++++++++++++++++ */
+/* +++++++++ Header +++++++++ */
+/* ++++++++++++++++++++++++++ */
+header {
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(../img/coffee_Background1.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(../img/coffee_Background1.jpg);
+    height: 100vh;
+}
+
+.jwy_header_textbox {
+    position: absolute;
+    width: 1140px;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+/* ++++++++++++++++++++++++++ */
+/* ++++ Statistics Bar  +++++ */
+/* ++++++++++++++++++++++++++ */
+.statistics {
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.70),rgba(255, 255, 255, 0.50)), url(../img/coffee_Transition_1.png);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.70),rgba(255, 255, 255, 0.50)), url(../img/coffee_Transition_1.png);
+}
+
+.statistics p {
+    text-align: center;
+    color: #343434;
+}
+
+.jwy_boxNumber {
+    font-size: 400%;
+    margin-bottom: 0px;
+}
+
+.jwy_boxText {
+    font-size: 150%;
+    margin-bottom: 30px;
+}
+
+/* ++++++++++++++++++++++++++ */
+/* ++++++++ About me ++++++++ */
+/* ++++++++++++++++++++++++++ */
+#jwy_aboutMe {
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(../img/coffee_Background2.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(../img/coffee_Background2.jpg);
+}
+
+#jwy_aboutMe .long-text{
+    line-height: 150%;
+    font-size: 120%;
+    color: #fff;
+}
+
+.profile_img {
+    padding: 30px;
+    margin: 25px auto 0px auto;
+    text-align: center;
+}
+
+.profile_img img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    margin: 0px auto;
+}
+
+/* ++++++++++++++++++++++++++ */
+/* ++++ Objective  Bar  +++++ */
+/* ++++++++++++++++++++++++++ */
+.objective {
+    background-image:-webkit-linear-gradient( rgba(255, 255, 255, 0.40),rgba(255, 255, 255, 0.70)), url(../img/coffee_Transition_2.jpg);
+    background-image:linear-gradient( rgba(255, 255, 255, 0.40),rgba(255, 255, 255, 0.70)), url(../img/coffee_Transition_2.jpg);
+}
+
+.objective p {
+    color: #343434;
+}
+
+.jwy_objective {
+    margin: 25px auto 0px auto;
+    font-weight: 800;
+    font-size: 350%
+}
+
+.jwy_objective_answer {
+    margin: 40px auto;
+    padding: 0px 100px;
+    text-align: center;
+    font-size: 220%;
+    font-weight: 600;
+}
+
+/* ++++++++++++++++++++++++++ */
+/* ++++++++ Projects ++++++++ */
+/* ++++++++++++++++++++++++++ */
+#jwy_projects {
+    background-image:-webkit-linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.60)), url(../img/coffee_Background3.jpg);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.60)), url(../img/coffee_Background3.jpg);
+}
+
+#jwy_projects img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.project_box {
+    text-align: center;
+    color: #fff;
+    background-color: rgba(202, 105, 36, 0.46);
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+    box-shadow: 0 2px 2px #CA6924;
+}
+
+#jwy_projects .row:last-child {
+    padding-bottom: 50px;
+}
+
+.project_header {
+    background-color: rgba(202, 105, 36, 0.16);
+    border-bottom: 1px solid #CA6924;
+}
+
+h5 {
+    padding-top: 10px;
+    font-weight: 600;
+    font-size: 200%;
+}
+
+.project_box div {
+    padding: 15px;
+}
+
+.project_box ul li {
+    font-size: 130%;
+    list-style: none;
+    text-align: left;
+    padding: 5px 0;
+}
+
+.project_btn a {
+    margin-bottom: 10px;
+}
+
+/* ++++++++++++++++++++++++++ */
+/* ++++++++ Visit me ++++++++ */
+/* ++++++++++++++++++++++++++ */
+.visit_me {
+    background-image:-webkit-linear-gradient( rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.20)), url(../img/coffee_Transition_3.jpg);
+    background-image:linear-gradient( rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.20)), url(../img/coffee_Transition_3.jpg);
+}
+
+/* ++++++++++++++++++++++++++ */
+/* +++++++ Contact me +++++++ */
+/* ++++++++++++++++++++++++++ */
+#jwy_contactMe {
+    background-image:-webkit-linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.60)), url(../img/coffee_Background4.jpg);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.60)), url(../img/coffee_Background4.jpg);
+}
+
+.contact-form {
+    width: 60%;
+    margin: 10px auto 40px auto;
+}
+
+.contact-form .row {
+    margin-bottom: 10px;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height:100px;
+    resize: none;
+}
+
+#jwy_contactMe label {
+    color: #fff;
+}
+
+*:focus {
+    outline-color: #CA6924;
+}
+
+input[type=submit] {
+    margin-bottom: 60px;
+}
+
+/* ++++++++++++++++++++++++++ */
+/* +++++++++ Footer +++++++++ */
+/* ++++++++++++++++++++++++++ */
+footer {
+    background-color: #333;
+    padding: 40px;
+    font-size: 120%
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right: 0px;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    color: #888;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+    font-size: 140%;
+}
+
+footer p {
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* ++++++++++++++++++++++++++ */
+/* ++++++ Social Icons ++++++ */
+/* ++++++++++++++++++++++++++ */
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-googleplus,
+.ion-social-linkedin,
+.ion-social-instagram,
+.ion-social-github {
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.ion-social-facebook:hover {
+    color: #3b5998;
+}
+.ion-social-twitter:hover {
+    color: #0084b4;
+}
+.ion-social-googleplus:hover {
+    color: #dd4b39;
+}
+.ion-social-linkedin:hover {
+    color: #0077B5;
+}
+.ion-social-instagram:hover {
+    color: #517fa4;
+}
+.ion-social-github:hover {
+    color: #6e5494
+}

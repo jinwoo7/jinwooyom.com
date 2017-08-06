@@ -1,0 +1,67 @@
+<html lang="en">
+    <head>
+        <title>JWY_PassHash</title>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <link rel="stylesheet" type="text/css" href="../../../vendors/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="./css/jwy_style.css">
+        <link rel="stylesheet" type="text/css" href="./css/jwy_passgen_style.css">
+    </head>
+    <body>
+        <div class="row menu">
+            <a href="../public/index.html">Main Menu</a>
+        </div>
+        <div class="page">
+            <h1>JWY Password Generator</h1>
+            <form>
+                <div class="row">
+                    <table id="inputTable">
+                            <tr>
+                                <th class="left"><label for="password">Secure Phrase:</label></th>
+                                <td class="right">
+                                    <textarea id="password" style="color:white;" spellcheck="false" rows="1" placeholder="Your secure passphrase will be hidden"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="left"><label for="key">Key:</label></th>
+                                <td class="right">
+                                    <input id="key" name="key" type="password" onkeypress="return onlyAlphabets(event,this);" autocomplete="off" placeholder="Only Alphabet characters are accepted">
+                                </td>
+                            </tr>
+                    </table>
+                </div>
+                <div class="row">
+                    <p>
+                        Please choose the encryption algorithm(s) to apply. You may choose more than one :) 
+                    </p>
+                </div>
+                <div class="row">
+                    <ul id="algorithms">
+                        <il>
+                            <input type="checkbox" class="selection" id="reverse" checked> Reverse
+                        </il>
+                        <il>
+                            <input type="checkbox" class="selection" id="vigenere" checked> Vigenere
+                        </il>
+                        <il>
+                            <input type="checkbox" class="selection" id="b64" checked> Base64
+                        </il>
+                        <il>
+                            <input type="checkbox" class="selection" id="sChars" checked> SpecialChars
+                        </il>
+                    </ul>
+                </div>
+                <div class="row">
+                        <button type="button" id="hashBtn" style="vertical-align:top;">Encrypt &amp; Save to Clipboard!</button>
+                </div>
+            </form>
+        </div>
+    </body>
+    <script src="./js/jwy_algorithms.js"></script>
+    <script src="./js/jwy_password_generator.js"></script>
+    <script>
+        /* testing area */
+        
+    </script>
+    
+</html>

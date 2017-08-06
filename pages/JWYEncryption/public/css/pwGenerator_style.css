@@ -1,0 +1,13 @@
+textarea {
+	resize:none;
+	overflow:auto;
+	min-width: 300px;
+}
+
+.page {
+	text-align: center;
+}
+
+#generateBTN {
+    margin: 20px 0px;
+}

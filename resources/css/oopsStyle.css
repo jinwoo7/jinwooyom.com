@@ -1,0 +1,418 @@
+/* --------------------------------- */
+/* BASIC SETUP*/
+/* --------------------------------- */
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration:none;
+}
+
+html,
+body {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x:hidden;
+}
+
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/* --------------------------------- */
+/* RESUABLE COMPONENTS */
+/* --------------------------------- */
+
+.row {
+    max-width: 1140px;
+    margin: 0px auto;
+}
+
+section {
+    padding: 80px 0px;
+}
+
+.box {
+    padding: 1%;
+}
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display:block;
+}
+
+cite img {
+    height: 45px;
+    width: auto;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* ----- HEADINGS ------ */
+
+
+
+h1, h2, h3 {
+    font-weight: 310;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    margin: 0;
+    color: #fff;
+    margin-top: 0px;
+    word-spacing: 4px;
+}
+
+.name {
+    font-size: 480%;
+}
+
+.desc {
+    font-weight: 300;
+    font-size: 90%;
+    margin-bottom: 20px;
+}
+
+a:link .wrap {
+    font-weight: 310;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    color: #fff;
+    margin-top: 0px;
+    word-spacing: 4px;
+    font-weight: 300;
+    font-size: 100%;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #87ADDE;
+    content: " ";
+    width: 150px;
+    margin: 30px auto;
+    
+}
+
+/* ----- PARAGRAPHS ------ */
+
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.black-long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin: 5% 15%;
+    color: black;
+}
+
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+    text-align: center;
+}
+
+/* ----- ICONS ------ */
+
+.icon-big {
+    font-size: 300%;
+    display: block;
+    color: #87ADDE;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.icon-small {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #87ADDE;    
+    font-size: 120%;
+    
+    /* secrets to align text and icons*/
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -4px;
+}
+
+/* ----- LINKS ------ */
+
+a:link,
+a:visited {
+    margin-top: 3%;
+    text-decoration: none;
+    color: #87ADDE;
+    padding-bottom: 1px;
+    -webkit-transition:border-bottom 0.2s, color 0.2s;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+/* ----- BUTTONS ------ */
+
+.btn:link,
+.btn:visited,
+input[type=submit] {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 15px;
+    -webkit-transition:background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    margin-right: 20px;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+    background-color: #87ADDE;
+    border: 1px solid #87ADDE;
+    color: #fff;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited{
+    border: 2px solid #87ADDE;
+    color: #87ADDE;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: #2E5485;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #2E5485;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #2E5485;
+}
+
+
+/* --------------------------------- */
+/* Header */
+/* --------------------------------- */
+
+header {
+    background-position: center;
+    background-size: cover;
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/artsy2.JPG);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/artsy2.JPG);
+    
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.intro-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left: 50%;
+    text-align: center;
+}
+.signature {
+    margin-top: 90px;
+    -ms-flex-line-pack:stretch;
+    align-content:stretch;
+    text-align: center;
+}
+
+.signature p {
+    color: aliceblue;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.logo-black {
+    display: none;
+    height: 50px;
+    width: auto;
+    float: left;
+    margin: 5px 0;
+}
+
+/* Main nav */
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px, 0px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    -webkit-transition:border-bottom 0.2s;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #87ADDE;
+}
+
+/* Mobile nav */
+.mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: #fff;
+}
+
+/* Sticky nav */
+.sticky {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 2px 2px #efefef;
+    z-index: 9999;
+}
+
+.sticky .main-nav { margin-top: 18px;}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    padding: 5px 0px;
+    color: #555;
+}
+
+.sticky .logo-black { display: block; }
+.sticky .logo { display: none; }
+
+/* --------------------------------- */
+/* Game Summery*/
+/* --------------------------------- */
+
+.section-summery {
+    background-color: #f4f4f4;
+}
+
+.section-summery .long-copy {
+    color:white;
+    width: 70%;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-size: 90%;
+}
+
+.long-copy .specialties {
+    text-align: left;
+}
+
+.section-summery .row {
+    text-align: center;
+}
+
+.section-summery cite {
+    display: block;
+}
+
+.section-summery cite img {
+    height: 160px;
+}
+
+.section-summery ul {
+    text-align: left;
+    padding-left: 20%;
+}
+
+.section-summery il {
+    display: block;
+    margin-top: 10px;
+}
+
+/* --------------------------------- */
+/* For Animations */
+/* --------------------------------- */
+
+.js--work-expirience {
+    opacity:0;
+}
+
+.js--work-expirience {
+    opacity: 1;
+}
+
+.js--myPic {
+    -webkit-animation-duration: .5s;
+    animation-duration: .9s;
+}

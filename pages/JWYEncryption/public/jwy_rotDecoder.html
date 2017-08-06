@@ -1,0 +1,37 @@
+<html lang="en">
+    <head>
+        <title>ROT Decoder</title>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <link rel="stylesheet" type="text/css" href="../../../vendors/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="./css/jwy_style.css">
+        <link rel="stylesheet" type="text/css" href="./css/jwy_rotDecoder_style.css">
+    </head>
+    <body>
+        <div class="row menu">
+            <a href="../public/index.html">Main Menu</a>
+        </div>
+        <div class="page">
+            <h1>ROT Decoder</h1>
+            
+            <div class="row inputRow">
+                <label for="rotText">Text:</label>
+                <textarea id="rotText" spellcheck="false" rows="5" placeholder="Enter your text here..."></textarea>
+            </div>
+            
+            <div class="row">
+                <button type="button" id="rotBtn">Decode!</button>
+            </div>
+            
+            <table id="rotations">
+                
+            </table>
+        </div>
+    </body>
+    <script src="./js/jwy_algorithms.js"></script>
+    <script src="./js/jwy_rotDecoder.js"></script>
+    <script> 
+        /* testing area *///console.log(rotationChipher("abcdefghijklmnopqrstuvwxyz",1));
+    </script>
+    
+</html>

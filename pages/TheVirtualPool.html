@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Jinwoo Yom - Independent Study in Video Game Design: LAZER">
+        <!-- Vendor's scripts -->
+        <meta property="og:image" content="../resources/css/img/thumbnail.png"/>
+        <link rel="stylesheet" type="text/css" href="../vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="../vendors/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="../vendors/css/animate.css">
+        <link rel="stylesheet" type="text/css" href="../vendors/css/ionicons.min.css">
+        <link rel="stylesheet" type="text/css" href="../resources/css/projectStyle.css">
+        <link rel="stylesheet" type="text/css" href="../resources/css/queries.css">
+        
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,300,100,300italic" rel="stylesheet" type="text/css">
+        
+        <!-- My script -->
+        <link rel="stylesheet" type="text/css" href="../resources/css/virtualpool.css">
+        
+        <title>Jinwoo Yom</title>
+        
+        <!-- Favicon stuff -->
+        <link rel="apple-touch-icon" sizes="57x57" href="../resources/favicons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="../resources/favicons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="../resources/favicons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="../resources/favicons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="../resources/favicons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="../resources/favicons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="../resources/favicons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="../resources/favicons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="../resources/favicons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="196x196"  href="../resources/favicons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../resources/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../resources/favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../resources/favicons/favicon-16x16.png">
+        <link rel="manifest" href="../resources/favicons/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="../resources/favicons/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+ 
+    <!-- The body of the webpage, where all visible stuff lies. -->
+    <body>
+        <header class="js--top-of-page" id="topOfPage">
+            <nav>
+                <div class="row">
+                    <img src="../resources/css/img/JinwooYom-LogoLight.png" alt="Jinwoo logo" class="logo">
+                    <img src="../resources/css/img/JinwooYom-LogoDark.png" alt="Jinwoo logo" class="logo-black">
+                    <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
+                    <ul class="main-nav js--main-nav">
+                        <li><a href="http://www.jinwooyom.com">Homepage</a></li>
+                        <li><a href="portfolio.html" >Portfolio</a></li>
+                        <li><a href="#summary">Game summary</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <h1 class="desc">***Please make sure to keep the mouse within the game screen!</h1>
+            <div class="gameCanvas">
+                <!--This draws the Canvas on the webpage -->
+                <canvas id="mycanvas"></canvas><br/>
+                <a class="btn btn-full js--btn-full" href="../resources/data/vpFinal%20Project%20Report%20-%20Jinwoo%20Yom.pdf" target="_blank">Documentation</a>
+                
+            </div>
+            
+        </header>
+        
+        <section class="section-summary js--summary" id="summary">
+            <div class="row">
+                <h2>What is The Virtual Pool?</h2>
+                <div class="fadein">
+                    <img clas="slideshow" src="../resources/css/img/vpPurpleIngame.PNG">
+                    <img clas="slideshow" src="../resources/css/img/vpStartScreen.PNG">
+                    <img clas="slideshow" src="../resources/css/img/vpWin.PNG">
+                    <img clas="slideshow" src="../resources/css/img/vpBeginning.PNG">
+                    <img clas="slideshow" src="../resources/css/img/vpOptions.PNG">
+                    <img clas="slideshow" src="../resources/css/img/vpinGameScreen.PNG">
+                </div>
+                <p class="black-long-copy">
+                    Virtual Pool is a two-player game using realistic ball collision physics to model a widely known cue sports called pool. In terms of the rules, it will follow all of the official rules of actual real-life game. Players will alternate back and forth attempting to hit all of their assigned type balls into the six pockets on the table. First player to hit all of their assigned balls and an 8 ball in the pocket wins. However, if one of the player accidently knocks the 8 ball in one of the pockets before hitting in all of his assigned balls, the other player wins. There are few other ways for a player to win or lose the game, which are all part of the official pool rules. It was built with ProcessingJS as an independent project at Virginia Tech by Jinwoo Yom.
+                </p>
+                <h3>Topics of Focus</h3>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <ul>
+                            <il>&#9679; Accurate 2D Physics<br/></il>
+                            <il>&#9679; Graphic User Interface<br/></il>
+                            <il>&#9679; Polar Coordinate Calculation<br/></il>
+                        </ul>
+                    </div>
+                    <div class="col span-1-of-3">
+                        <ul>
+                            <il>&#9679; Collision Detection<br/></il>
+                            <il>&#9679; Arts &amp; Special effects<br/></il>
+                            <il>&#9679; Testing and Debugging<br/></il>
+                        </ul>
+                    </div>
+                    <div class="col span-1-of-3">
+                        <ul>
+                            <il>&#9679; State Machine Logic<br/></il>
+                            <il>&#9679; Seemless Player Control<br/></il>
+                            <il>&#9679; Maintanance &amp; Scalability<br/></il>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row js--myPic">
+                    <cite><img src="../resources/css/img/profilePic.jpg" alt="Jinwoo Yom"></cite>
+                </div>
+            </div>
+        </section>        
+        
+        <footer>
+            <div class="row">
+                <div class="col span-1-of-2">
+                    <ul class="footer-nav">
+                        <li><a class="js--top-btn" href="#topOfPage"><i class="ion-arrow-up-b"></i> Back to top</a></li>
+                    </ul>
+                </div>
+                <div class="col span-1-of-2">
+                    <ul class="social-links">
+                        <li><a href="https://www.facebook.com/Jinwooyom" target="_blank"><i class="ion-social-facebook"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/jinwooyom" target="_blank"><i class="ion-social-linkedin"></i></a></li>
+                        <li><a href="https://plus.google.com/100988606084961669179" target="_blank"><i class="ion-social-googleplus"></i></a></li>
+                        <li><a href="https://www.instagram.com/jinwoo_7/" target="_blank"><i class="ion-social-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <p>
+                    Created by <font color="#87ADDE">Jinwoo Yom</font> 2016<br>
+                    Copyright &copy; 2016. All rights reserved
+                </p>
+            </div>
+        </footer>
+        
+        <!-- run all the JavaScript stuff -->
+        <!-- Include the processing.js library -->
+        <script src="../vendors/js/processing-1.4.8.min.js"></script>
+
+        <!-- The name of the Program Source Code goes here -->
+        <script src="../resources/js/TheVirtualPool.js"></script> 
+
+        <script type="application/javascript">
+            //get the canvas that Processing-js will use
+            var canvas = document.getElementById("mycanvas"); 
+            //pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+            var processingInstance = new Processing(canvas, sketchProc); 
+        </script>
+        <!-- helper script from https://developers.google.com/speed/libraries/ -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <!-- helper scripts from www.jsdelivr.com -->
+
+        <!-- Respond.js = allows the web browsers to understand and excute css media queries needed for responsive web design -->
+        <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+        <!-- html5 shiv = enables us to use HTML5 elements in order browser that were available before HTML5 -->
+        <script src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <!-- selectivizr = emulates CSS3 pseudo-classes and attribute selectors in Internet Explorer 6-8. Simply include the script in your pages and selectivizr will do the rest. -->
+        <script src="https://cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+        
+        <!-- Vendor's Script! -->
+        <script src="../vendors/js/jquery.waypoints.min.js"></script>
+        
+        <!-- My Script! -->
+        <script src="../resources/js/script.js"></script>
+        
+        <script type="text/javascript">
+            /* For Sticky Navigation */
+            $('.js--summary').waypoint(function(direction){
+                if (direction == "down"){
+                    $('nav').addClass('sticky');
+                }
+                else{
+                    $('nav').removeClass('sticky');
+                }
+            },{
+                offset: '60px;'
+            });
+            
+            /* Navigation scroll */
+            $(function() {
+              $('a[href*="#"]:not([href="#"])').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                  var target = $(this.hash);
+                  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                  if (target.length) {
+                    $('html, body').animate({
+                      scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                  }
+                }
+              });
+            });
+            
+            /* Mobile Nav */
+            $('.js--nav-icon').click(function() {
+                var nav = $('.js--main-nav');
+                var icon = $('.js--nav-icon i');
+
+                nav.slideToggle(200);
+                if (icon.hasClass('ion-navicon-round')){
+                    icon.addClass('ion-close-round');
+                    icon.removeClass('ion-navicon-round');
+                } else{
+                    icon.addClass('ion-navicon-round');
+                    icon.removeClass('ion-close-round');
+                }
+        
+            });
+        </script>
+        
+        <script type="text/javascript">
+        $(function() {
+        $('.fadein img:gt(0)').hide();
+        
+        setInterval(function () {
+            $('.fadein :first-child').fadeOut()
+                                     .next('img')
+                                     .fadeIn()
+                                     .end()
+                                     .appendTo('.fadein');
+        }, 3000); // 3 seconds
+        });
+        </script>
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-83697020-1', 'auto');
+            ga('send', 'pageview');
+            
+        </script>
+    </body>
+</html>

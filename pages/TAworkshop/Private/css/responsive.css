@@ -1,0 +1,143 @@
+/* Big tablet to 1200px: widths smaller than the 1140px row */
+@media only screen and (max-width: 1200px) {
+    .jwy_header_textbox { 
+        -webkit-transform: translate(-45%, -50%); 
+        transform: translate(-45%, -50%);
+        width: 70%;
+        padding: 0 2%;
+        text-align: center;
+    }
+    
+    .row {
+        padding:0 2%;
+    }
+    
+    #jwy_projects img {
+        height: 60%;
+        width: 60%;
+    }
+    
+    .project_box ul li {
+        font-size: 100%;
+    }
+    
+    .project_header {
+        font-size: 70%;
+    }
+}
+
+/* Small tablet to big tablet: from 768px to 1023px */
+@media only screen and (max-width: 1023px) {
+    .jwy_header_textbox {
+        font-size: 70%;
+    }
+    
+    .jwy_objective_answer {
+        padding: 0px 20px;
+    }
+    /* Icon */
+    .icon-big {
+        font-size: 400%;
+    }
+
+    .icon-small {
+        margin: 0px 8px;
+    }
+    
+    .jwy_boxNumber {
+        font-size: 200%;
+    }
+
+    .jwy_boxText {
+        font-size: 110%;
+    }
+    
+    /* about me */
+    .profile_img {
+        padding: 30px;
+    }
+    
+    .profile_img img {
+        height: 150px;
+        width: 150px;
+    }
+    
+    /* objective bar */
+    .jwy_objective {
+        font-size: 250%
+    }
+
+    .jwy_objective_answer {
+        font-size: 120%;
+    }
+
+}
+
+/* Small phones to small tablets: from 481px to 767px */
+@media only screen and (max-width: 767px) {    
+    .span-1-of-3 {
+        margin: 0px;
+        width: 100%;
+    }
+    .project_box {
+        margin: auto;
+        width: 300px;
+    }
+    .span-2-of-3 {
+        width: 100%;
+        text-align: center;
+    }
+    .contact-form {
+        margin: 0px auto 25px auto;
+        padding: 25px;
+        width: 80%;
+    }
+    .contact-form .span-1-of-3 {
+        padding-left: 10px;
+    }
+    input[type=submit] {
+        margin-bottom: 30px;
+    }
+    
+    .footer-nav {
+        font-size: 80%;
+    }
+
+    .social-links {
+        font-size: 70%;
+    }
+    
+}
+
+/* small Phone: from 0 to 480px */
+@media only screen and (max-width: 480px) {
+    .jwy_header_textbox .jwy_btn {
+        margin: 5px auto; 
+    }
+    
+    .navbar-right {
+        width: 155px;
+    }
+    
+    .jwy_header_textbox {
+        font-size: 50%;
+        
+    }
+    .footer-nav {
+        text-align: center;
+        float:none;
+        font-size: 80%;
+    }
+
+    .social-links {
+        float:none;
+        font-size: 80%;
+    }
+}
+
+/* Small tablet to big tablet: from 0px to 500px */
+@media only screen and (max-height: 520px) {
+    * {
+        font-size: 95%;
+    }
+}

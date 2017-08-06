@@ -1,0 +1,86 @@
+label {
+    vertical-align: top;
+    margin-right: 10px;
+}
+
+.menu {
+    font-size: 15px;
+    margin: 10px;
+}
+
+.page {
+	text-align: center;
+    margin-top: 100px;
+}
+
+textarea {
+    padding-top: 5px;
+    padding-left: 5px;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 100;
+    font-size: 13px;
+	overflow:auto;
+	min-width: 40%;
+    max-width: 70%;
+    min-height: 20%;
+    max-height: 50%;
+}
+
+.inputRow {
+    margin-top: 20px;
+}
+
+button {
+    margin: 10px 0px;
+    padding: 10px;
+}
+
+#rotations {
+    margin: 10px auto 50px;
+    border-collapse:  collapse;
+    max-width: 80%;
+}
+
+#rotations, th, td {
+    border:1px solid #555;
+}
+
+td {
+    padding: 10px 20px;
+} 
+
+.left {
+    text-align: right;
+}
+
+.right {
+    text-align: left;
+}
+
+/* ----- BUTTONS ------ */
+
+#rotBtn {
+    cursor: hand;
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    
+    background-color: #e8e8e8;
+    border: 3px solid #555;
+    color: #555;
+    
+    -webkit-transition:background-color 0.4s, border 0.2s, color 0.2s;
+    transition: background-color 0.4s, border 0.2s, color 0.2s;
+}
+
+#rotBtn:link,
+#hashBtn:visited {
+}
+
+#rotBtn:hover,
+#rotBtn:active {
+    background-color: #555;
+    color: #e8e8e8;
+}
