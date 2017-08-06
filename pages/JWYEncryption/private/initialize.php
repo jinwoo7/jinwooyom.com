@@ -33,14 +33,7 @@
 
 
     require_once('functions.php');
-    //require_once('database.php');
     require_once('query_functions.php');
     require_once('validation_functions.php');
     require_once('crypto_functions.php');
-    //require_once('jwy_crypto_functions.php');
-
-    //$db = db_connect();
-
-    // Always make a current user available
-    //$current_user = login();
 ?>
