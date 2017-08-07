@@ -5,8 +5,9 @@ var hashBtn = document.querySelector('#hashBtn');
 hashBtn.addEventListener('click', function (event) {
 	var text = document.querySelector('#password');
     var key = document.querySelector('#key');
+    var textStr = text.value;
     
-	if (text.value === "") { console.log("empty"); return; }
+	if (textStr === "") { showSnackBar("Your Passphrase is Empty!"); return; }
 
 	/* -------- Hashing -------- */
     // Reverse
@@ -27,8 +28,8 @@ hashBtn.addEventListener('click', function (event) {
     }
 
 	text.select();
-	copy(text);
-	text.value = "";
+	copy();
+    text.value = textStr;
 });
 
 // Limits the users to only input alphabets
@@ -46,7 +47,7 @@ function onlyAlphabets(e, t) {
             return false;
     }
     catch (err) {
-        alert(err.Description);
+        console.log(err.Description);
     }
 }
 
@@ -55,8 +56,31 @@ function copy() {
 	try {
 		var successful = document.execCommand('copy');
 		var msg = successful ? 'successfully' : 'unsuccessfully';
-		console.log('Hash was ' + msg + " copied to your clipboard!");
+        showSnackBar('Password was ' + msg + " copied to your clipboard");
 	} catch (err) {
-		console.log('Oops, unable to copy');
+		showSnackBar('Oops, something went wrong, try again!');
 	}
+}
+
+function toggler(e,str) {
+    if( e.innerHTML === 'Show' ) {
+        e.innerHTML = 'Hide'
+        document.getElementById(str).type="text";
+    } else {
+        e.innerHTML = 'Show'
+        document.getElementById(str).type="password";
+    }
+}
+
+function showSnackBar(str) {
+    // Get the snackbar DIV
+    var x = document.getElementById("snackbar")
+
+    // Add the "show" class to DIV
+    x.className = "show";
+    
+    x.textContent = str;
+
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }

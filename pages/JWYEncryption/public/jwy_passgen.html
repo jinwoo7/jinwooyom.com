@@ -19,13 +19,19 @@
                             <tr>
                                 <th class="left"><label for="password">Secure Phrase:</label></th>
                                 <td class="right">
-                                    <textarea id="password" style="color:white;" spellcheck="false" rows="1" placeholder="Your secure passphrase will be hidden"></textarea>
+                                    <input type="password" id="password" spellcheck="false" placeholder="Your secure passphrase" autocomplete='off'>
+                                </td>
+                                <td>
+                                    <button class="hideBTN" onclick="toggler(this,'password')" type="button">Show</button>
                                 </td>
                             </tr>
                             <tr>
                                 <th class="left"><label for="key">Key:</label></th>
                                 <td class="right">
-                                    <input id="key" name="key" type="password" onkeypress="return onlyAlphabets(event,this);" autocomplete="off" placeholder="Only Alphabet characters are accepted">
+                                    <input id="key" name="key" type="password" onkeypress="return onlyAlphabets(event,this);" autocomplete="off" placeholder="Only Alphabet characters are accepted" autocomplete='off'>
+                                </td>
+                                <td>
+                                    <button class="hideBTN" onclick="toggler(this,'key')" type="button">Show</button>
                                 </td>
                             </tr>
                     </table>
@@ -55,7 +61,9 @@
                         <button type="button" id="hashBtn" style="vertical-align:top;">Encrypt &amp; Save to Clipboard!</button>
                 </div>
             </form>
+            <div id="snackbar"></div>
         </div>
+        
     </body>
     <script src="./js/jwy_algorithms.js"></script>
     <script src="./js/jwy_password_generator.js"></script>
