@@ -9,7 +9,7 @@
   $decrypted_text = '';
 
   if(isset($_GET['cipher'])) {
-      $cipher_text = urldecode($_GET['cipher']);
+      $cipher_text = $_GET['cipher'];
   }
 
   if(isset($_POST['submit'])) {
@@ -27,7 +27,7 @@
       $cipher_text = isset($_POST['cipher_text']) ? $_POST['cipher_text'] : nil;
       $decode_key = isset($_POST['decode_key']) ? $_POST['decode_key'] : nil;
       $decode_algorithm = isset($_POST['decode_algorithm']) ? $_POST['decode_algorithm'] : nil;
-      $decrypted_text = htmlspecialchars(key_decrypt($cipher_text, $decode_key, $decode_algorithm));    
+      $decrypted_text = key_decrypt($cipher_text, $decode_key, $decode_algorithm);    
     }
   }
 ?>
@@ -114,7 +114,14 @@
                 echo('http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'] . '?cipher=' . urlencode($encrypted_text));
                 echo("</div>");
             }
+          $plus = '+++';
+          $encode = urlencode($plus);
+          $decode = urldecode($encode);
+          echo($plus . '<br/>');
+          echo($encode . '<br/>');
+          echo($decode . '<br/>');
         ?>
+        
     </div>
   </body>
 </html>
