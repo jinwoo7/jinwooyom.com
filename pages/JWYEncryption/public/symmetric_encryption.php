@@ -40,88 +40,81 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <link rel="stylesheet" media="all" href="includes/styles.css" />
-      <link rel="stylesheet" type="text/css" href="./css/effects.css">
+    <link rel="stylesheet" type="text/css" href="./css/effects.css">
+    <link rel="stylesheet" type="text/css" href="./css/jwy_symmetric_style.css">
   </head>
   <body>
-    
-    <a href="index.html">Main menu</a>
-    <br/>
+      <div id="content">
+        <a class="btn" href="index.html">Menu</a>
+        <br/>
 
-    <h1>Symmetric Encryption</h1>
-    
-    <div id="encoder">
-      <h2>Encrypt</h2>
+        <h1>Symmetric Encryption</h1>
 
-      <form action="" method="post">
-        <div>
-          <label for="encode_algorithm">Algorithm</label>
-          <select name="encode_algorithm">
-            <option value="AES-256-CBC">AES-256-CBC</option>
-            <option value="BF-CBC">BF-CBC</option>
-            <option value="DES-EDE3-CBC">DES-EDE3-CBC</option>
-          </select>
+        <div id="encoder">
+          <h2>Encrypt</h2>
+          <form action="" method="post">
+            <div class="section_inputs">
+              <label for="encode_algorithm">Algorithm</label>
+              <select name="encode_algorithm">
+                <option value="AES-256-CBC">AES-256-CBC</option>
+                <option value="BF-CBC">BF-CBC</option>
+                <option value="DES-EDE3-CBC">DES-EDE3-CBC</option>
+              </select>
+            </div>
+            <div class="section_inputs">
+              <label for="plain_text">Plain text</label>
+              <textarea name="plain_text"><?php echo $plain_text; ?></textarea>
+            </div>
+            <div class="section_inputs">
+              <label for="encode_key">Key</label>
+              <input type="text" name="encode_key" value="<?php echo $encode_key; ?>" />
+            </div>
+            <input class="btn" type="submit" name="submit" value="Encrypt">
+          </form>
+
+          <div class="result"><?php echo $encrypted_text; ?></div>
+          <div style="clear:both;"></div>
         </div>
-        <div>
-          <label for="plain_text">Plain text</label>
-          <textarea name="plain_text"><?php echo $plain_text; ?></textarea>
+
+        <hr />
+
+        <div id="decoder">
+          <h2>Decrypt</h2>
+          <form action="" method="post">
+            <div class="section_inputs">
+              <label for="decode_algorithm">Algorithm</label>
+              <select name="decode_algorithm">
+                <option value="AES-256-CBC">AES-256-CBC</option>
+                <option value="BF-CBC">BF-CBC</option>
+                <option value="DES-EDE3-CBC">DES-EDE3-CBC</option>
+              </select>
+            </div>
+            <div class="section_inputs">
+              <label for="cipher_text">Cipher text</label>
+              <textarea id="cipherText" name="cipher_text"><?php echo $cipher_text; ?></textarea>
+            </div>
+            <div class="section_inputs">
+              <label for="decode_key">Key</label>
+              <input type="text" name="decode_key" value="<?php echo $decode_key; ?>" />
+            </div>
+            <input class="btn" type="submit" name="submit" value="Decrypt">
+          </form>
+
+          <div class="result"><?php echo $decrypted_text; ?></div>
+          <div style="clear:both;"></div>
         </div>
-        <div>
-          <label for="encode_key">Key</label>
-          <input type="text" name="encode_key" value="<?php echo $encode_key; ?>" />
-        </div>
-        <div>
-          <input type="submit" name="submit" value="Encrypt">
-        </div>
-      </form>
-    
-      <div class="result"><?php echo $encrypted_text; ?></div>
-      <div style="clear:both;"></div>
+
+        <div id="snackbar"></div>
+
+        <script src="./js/jwy_password_generator.js"></script>
+        <?php
+            if(isset($_POST['encode_key']) && $_POST['encode_key'] !== '') {
+                echo("<div id='share'>");
+                echo('Share this link:<br/>');
+                echo('http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'] . '?cipher=' . $encrypted_text);
+                echo("</div>");
+            }
+        ?>
     </div>
-    
-    <hr />
-    
-    <div id="decoder">
-      <h2>Decrypt</h2>
-
-      <form action="" method="post">
-        <div>
-          <label for="decode_algorithm">Algorithm</label>
-          <select name="decode_algorithm">
-            <option value="AES-256-CBC">AES-256-CBC</option>
-            <option value="BF-CBC">BF-CBC</option>
-            <option value="DES-EDE3-CBC">DES-EDE3-CBC</option>
-          </select>
-        </div>
-        <div>
-          <label for="cipher_text">Cipher text</label>
-          <textarea id="cipherText" name="cipher_text"><?php echo $cipher_text; ?></textarea>
-        </div>
-        <div>
-          <label for="decode_key">Key</label>
-          <input type="text" name="decode_key" value="<?php echo $decode_key; ?>" />
-        </div>
-        <div>
-          <input type="submit" name="submit" value="Decrypt">
-        </div>
-      </form>
-
-      <div class="result"><?php echo $decrypted_text; ?></div>
-      <div style="clear:both;"></div>
-    </div>
-    
-    <div id="snackbar"></div>
-      
-    <script src="./js/jwy_functions.js"></script>
-    <?php
-        if(isset($_POST['encode_key']) && $_POST['encode_key'] !== '') {
-            echo("<script>");
-            echo("var cipher = document.querySelector('#cipherText');");
-            echo("console.log(cipher.value);");
-            echo("cipher.select();");
-            //document.execCommand('copy');
-            echo("copy('Your link was successfully saved to your clipboard');");
-            echo("</script>");
-        }
-    ?>
   </body>
 </html>
