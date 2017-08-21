@@ -96,6 +96,7 @@
           <div class="result"><?php echo h($decrypted_text); ?></div>
           <div style="clear:both;"></div>
         </div>
+        <div id="margin"></div>
     </div>
   </body>
 </html>
