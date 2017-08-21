@@ -9,7 +9,7 @@
   $decrypted_text = '';
 
   if(isset($_GET['cipher'])) {
-      $cipher_text = $_GET['cipher'];
+      $cipher_text = urldecode($_GET['cipher']);
   }
 
   if(isset($_POST['submit'])) {
