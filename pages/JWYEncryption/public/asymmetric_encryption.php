@@ -28,7 +28,7 @@
       $cipher_text = isset($_POST['cipher_text']) ? $_POST['cipher_text'] : null;
       $private_key = isset($_POST['private_key']) ? $_POST['private_key'] : null;
       if ($cipher_text != null && $private_key != null) {
-        $decrypted_text = pkey_decrypt($cipher_text, $private_key);
+        $decrypted_text = htmlspecialchars(pkey_decrypt($cipher_text, $private_key));
       }
     }
   }

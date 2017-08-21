@@ -8,6 +8,10 @@
   $decode_key = '';
   $decrypted_text = '';
 
+  if(isset($_GET['cipher'])) {
+      $cipher_text = $_GET['cipher'];
+  }
+
   if(isset($_POST['submit'])) {
   
     if(isset($_POST['encode_key'])) {
@@ -23,7 +27,7 @@
       $cipher_text = isset($_POST['cipher_text']) ? $_POST['cipher_text'] : nil;
       $decode_key = isset($_POST['decode_key']) ? $_POST['decode_key'] : nil;
       $decode_algorithm = isset($_POST['decode_algorithm']) ? $_POST['decode_algorithm'] : nil;
-      $decrypted_text = key_decrypt($cipher_text, $decode_key, $decode_algorithm);    
+      $decrypted_text = htmlspecialchars(key_decrypt($cipher_text, $decode_key, $decode_algorithm));    
     }
   }
 ?>
@@ -36,6 +40,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <link rel="stylesheet" media="all" href="includes/styles.css" />
+      <link rel="stylesheet" type="text/css" href="./css/effects.css">
   </head>
   <body>
     
@@ -89,7 +94,7 @@
         </div>
         <div>
           <label for="cipher_text">Cipher text</label>
-          <textarea name="cipher_text"><?php echo $cipher_text; ?></textarea>
+          <textarea id="cipherText" name="cipher_text"><?php echo $cipher_text; ?></textarea>
         </div>
         <div>
           <label for="decode_key">Key</label>
@@ -104,5 +109,19 @@
       <div style="clear:both;"></div>
     </div>
     
+    <div id="snackbar"></div>
+      
+    <script src="./js/jwy_functions.js"></script>
+    <?php
+        if(isset($_POST['encode_key']) && $_POST['encode_key'] !== '') {
+            echo("<script>");
+            echo("var cipher = document.querySelector('#cipherText');");
+            echo("console.log(cipher.value);");
+            echo("cipher.select();");
+            //document.execCommand('copy');
+            echo("copy('Your link was successfully saved to your clipboard');");
+            echo("</script>");
+        }
+    ?>
   </body>
 </html>
