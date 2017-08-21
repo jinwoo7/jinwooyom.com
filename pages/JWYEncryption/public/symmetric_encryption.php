@@ -111,7 +111,7 @@
             if(isset($_POST['encode_key']) && $_POST['encode_key'] !== '') {
                 echo("<div id='share'>");
                 echo('Share this link:<br/>');
-                echo('http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'] . '?cipher=' . $encrypted_text);
+                echo('http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'] . '?cipher=' . urlencode($encrypted_text));
                 echo("</div>");
             }
         ?>
