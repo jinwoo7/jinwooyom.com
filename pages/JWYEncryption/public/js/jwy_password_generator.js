@@ -28,6 +28,6 @@ hashBtn.addEventListener('click', function (event) {
     }
 
 	text.select();
-	copy();
+	copy("Your password is succesfully saved to your clipboard");
     text.value = textStr;
 });
