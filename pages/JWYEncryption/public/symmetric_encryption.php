@@ -114,12 +114,6 @@
                 echo('http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'] . '?cipher=' . urlencode($encrypted_text));
                 echo("</div>");
             }
-          $plus = '+++';
-          $encode = urlencode($plus);
-          $decode = urldecode($encode);
-          echo($plus . '<br/>');
-          echo($encode . '<br/>');
-          echo($decode . '<br/>');
         ?>
         
     </div>
