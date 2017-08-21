@@ -4,7 +4,7 @@
     background-size: cover;
     background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/encryption-background.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/encryption-background.jpg);
-    height: 100vh;
+    /*height: 100vh;*/
     background-attachment: fixed;
     color:#e6e6e6;
 }
@@ -70,4 +70,9 @@ input {
     background-color: #ddd;
     color: #333;
     border: 2px solid #000000;
+}
+
+#margin {
+    margin-top: 300px;
+    margin-bottom: 300px;
 }
