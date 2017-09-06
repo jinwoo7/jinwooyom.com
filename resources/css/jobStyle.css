@@ -1,0 +1,229 @@
+/* --------------------------------- */
+/* BASIC SETUP*/
+/* --------------------------------- */
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration:none;
+}
+
+html,
+body {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x:hidden;
+}
+
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/* --------------------------------- */
+/* RESUABLE COMPONENTS */
+/* --------------------------------- */
+
+.row {
+    max-width: 1140px;
+    margin: 0px auto;
+}
+
+h1 {
+    display: inline-block;
+    font-size: 270%;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #fff;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+h5 {
+    margin-bottom: 30px;
+}
+
+/* --------------------------------- */
+/* Work Expirience Pages */
+/* --------------------------------- */
+
+section {
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+#nav {
+    color:white;
+    padding:30px;
+}
+
+table {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.40);
+    padding: 30px;
+    border-radius: 2%;
+    margin-bottom: 70px;
+}
+
+.link-list {
+    text-align: left;
+}
+
+.jobDescription {
+    text-align: center;
+    padding: 20px 80px 80px 80px;
+}
+
+.companyLogo { 
+    width: 30%;
+    margin: 40px auto;
+}
+
+.dotColumn {
+    vertical-align: text-top;
+}
+
+.taskColumn {
+    vertical-align: text-top;
+    padding: 5px;
+    text-align: left;
+}
+
+tr > td {
+    padding-bottom: 35px;
+}
+
+#profilePic {
+    margin-top: 50px;
+}
+
+#profilePic img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+/* --------------------------------- */
+/* LINKS */
+/* --------------------------------- */
+
+#nav a:link,
+#nav a:visited {
+    text-decoration: none;
+    border-bottom: 0px;
+    color: #fff;
+    -webkit-transition:color 0.2s;
+    transition: color 0.2s;
+}
+
+#nav a:hover,
+#nav a:active {
+    color: #bfbfbf;
+}
+
+.link-list a:link,
+.link-list a:visited {
+    text-decoration: none;
+    border-bottom: 0px;
+    color: #fff;
+    -webkit-transition:color 0.2s;
+    transition: color 0.2s;
+}
+
+.link-list a:hover,
+.link-list a:active {
+    color: #bfbfbf;
+}
+
+/* --------------------------------- */
+/* FOOTER */
+/* --------------------------------- */
+
+footer {
+    background-color: #333;
+    padding: 40px;
+    font-size: 80%;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right: 0px;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border-bottom: 0px;
+    color: #888;
+    -webkit-transition:color 0.2s;
+    transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #ddd;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+    font-size: 160%;
+}
+
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-googleplus,
+.ion-social-instagram {
+    -webkit-transition:color 0.2s;
+    transition: color 0.2s;
+}
+
+.ion-social-facebook:hover {
+    color: #3b5998;
+}
+.ion-social-linkedin:hover {
+    color: #0077B5;
+}
+.ion-social-googleplus:hover {
+    color: #dd4b39;
+}
+.ion-social-instagram:hover {
+    color: #517fa4;
+}
+.ion-social-github:hover {
+    color: #6e5494;
+}
+
+footer p {
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}

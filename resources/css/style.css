@@ -503,9 +503,9 @@ table, th, td {
     margin-bottom: 10px;
 }
 
-.section-expirience .project-writing {
+.section-expirience .projectDetailBtn {
     margin-bottom: 40px;
-    text-align: left;
+    text-align: center;
 }
 
 /* ++++++++++++++++++++++++++ */
@@ -731,7 +731,7 @@ footer {
     color: #517fa4;
 }
 .ion-social-github:hover {
-    color: #6e5494
+    color: #6e5494;
 }
 
 footer p {
