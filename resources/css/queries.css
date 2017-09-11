@@ -14,6 +14,9 @@
     body { font-size: 18px; }
     section { padding: 60px 0; }
     
+    .education_card img {
+        height: 70px;
+    }
     
     .long-copy {
         width: 80%;
@@ -50,7 +53,6 @@
 @media only screen and (max-width: 767px) {
     body { font-size: 16px; }
     section{ padding:30px 0; }
-    
     
     .row,
     .hero-text-box { padding: 0 4%; }
@@ -159,6 +161,11 @@
     .logo {
         width: 20%;
     }
+    
+    .education_card img {
+        height: 50px;
+    }
+    
     section { padding: 25px 0; }
     .contact-form {width: 100%; }
 }

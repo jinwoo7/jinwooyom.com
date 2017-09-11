@@ -121,7 +121,7 @@ h4 {
 h2:after {
     display: block;
     height: 2px;
-    background-color: #87ADDE;
+    background-color: #000;
     content: " ";
     width: 150px;
     margin: 30px auto;
@@ -147,7 +147,7 @@ h2:after {
 .icon-big {
     font-size: 300%;
     display: block;
-    color: #87ADDE;
+    color: #000;
     margin-bottom: 10px;
     text-align: center;
 }
@@ -156,7 +156,7 @@ h2:after {
     display: inline-block;
     width: 30px;
     text-align: center;
-    color: #87ADDE;    
+    color: #000;    
     font-size: 120%;
     
     /* secrets to align text and icons*/
@@ -169,6 +169,14 @@ h2:after {
 .emptyBar {
     background-size: cover;
     background-position: center;
+    background-color: #e2e2e2;
+    padding: 40px;
+}
+
+.bar_objective {
+    margin: 25px auto 0px auto;
+    font-weight: 800;
+    font-size: 270%
 }
 
 /* ----- LINKS ------ */
@@ -176,9 +184,9 @@ h2:after {
 a:link,
 a:visited {
     text-decoration: none;
-    color: #87ADDE;
+    color: #000;
     padding-bottom: 1px;
-    /*border-bottom: 1px solid #87ADDE;*/
+    /*border-bottom: 1px solid #000;*/
     -webkit-transition:border-bottom 0.2s, color 0.2s;
     transition: border-bottom 0.2s, color 0.2s;
 }
@@ -196,9 +204,8 @@ a:active {
 input[type=submit] {
     display: inline-block;
     padding: 10px 30px;
-    font-weight: 300;
+    font-weight: 400;
     text-decoration: none;
-    border-radius: 15px;
     -webkit-transition:background-color 0.2s, border 0.2s, color 0.2s;
     transition: background-color 0.2s, border 0.2s, color 0.2s;
     margin-right: 20px;
@@ -207,15 +214,15 @@ input[type=submit] {
 .btn-full:link,
 .btn-full:visited,
 input[type=submit] {
-    background-color: #87ADDE;
-    border: 1px solid #87ADDE;
+    background-color: #000;
+    border: 3px solid #000;
     color: #fff;
 }
 
 .btn-ghost:link,
 .btn-ghost:visited{
-    border: 2px solid #87ADDE;
-    color: #87ADDE;
+    border: 3px solid #000;
+    color: #000;
 }
 
 .btn:hover,
@@ -224,21 +231,25 @@ input[type=submit]:hover,
 input[type=submit]:active {
     display: inline-block;
     padding: 10px 30px;
-    font-weight: 300;
+    font-weight: 400;
     text-decoration: none;
-    border-radius: 15px;
-    background-color: #2E5485;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .btn-full:hover,
-.btn-full:active {
-    border: 1px solid #2E5485;
+.btn-full:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 3px solid #fff;
+    color: #000;
 }
 
 .btn-ghost:hover,
 .btn-ghost:active {
     background-color: rgba(0, 0, 0, 0.5);
-    border: 2px solid #2E5485;
+    border: 3px solid #fff;
+    color: #fff;
 }
 
 
@@ -249,8 +260,8 @@ input[type=submit]:active {
 header {
     background-position: center;
     background-size: cover;
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/headerpic.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/headerpic.jpg);
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/headerpic.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/headerpic.jpg);
     height: 100vh;
     background-attachment: fixed;
 }
@@ -326,7 +337,7 @@ header a:active {
 
 .main-nav li a:hover,
 .main-nav li a:active {
-    border-bottom: 2px solid #87ADDE;
+    border-bottom: 2px solid #000;
 }
 
 /* Mobile nav */
@@ -353,7 +364,7 @@ header a:active {
     top:0;
     left:0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.97);
+    background-color: rgba(255, 255, 255, 0.93);
     box-shadow: 0 2px 2px #efefef;
     z-index: 9999;
 }
@@ -387,6 +398,21 @@ header .customShake {
   100% {  transform:scale(1) rotate(0); }
 }
 
+/* ++++++++++++++++++++++++++ */
+/* ++++ Education  Bar  +++++ */
+/* ++++++++++++++++++++++++++ */
+.education_card {
+    text-align: center;
+    padding: 10px;
+    border: 5px solid #555;
+}
+
+.education img {
+    height:100px;
+    width: auto;
+}
+
+
 /* --------------------------------- */
 /* About Me*/
 /* --------------------------------- */
@@ -394,8 +420,9 @@ header .customShake {
 .section-aboutMe {
     background-position: center;
     background-size: cover;
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/virginia-tech.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/virginia-tech.jpg);
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/Background2.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/Background2.jpg);
+    background-attachment: fixed;
     align-content: center;
 }
 
@@ -414,7 +441,11 @@ header .customShake {
     text-align: center;
     margin-top: 30px;
     margin-bottom: 40px;
-    font-size: 90%;
+    font-size: 100%;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px 50px;
+    border-radius: 30px;
 }
 
 .long-copy .specialties {
@@ -435,22 +466,21 @@ header .customShake {
 }
 
 table {
-    background: rgba(2, 2, 2, 0.56);
+    background: rgba(2, 2, 2, 0.6);
     border-collapse: collapse;
-    border-radius: 20px;
     width: 85%;
     margin: auto;
 }
 
 table, th, td {
     color: white;
-    border: 3px solid #87ADDE;
+    border: 3px solid #000;
     padding: 10px;
 }
 
 .skillTable th {
     text-align: center;
-    color: #87ADDE;
+    color: #fff;
     
     
 }
@@ -462,23 +492,12 @@ table, th, td {
 /* ++++++++++++++++++++++++++ */
 /* ++++ Objective  Bar  +++++ */
 /* ++++++++++++++++++++++++++ */
-.objective {
-    background-image:linear-gradient( rgba(163, 110, 9, 0.10),rgba(191, 125, 0, 0.10)), url(./img/transition_background1.jpg);
-}
-
 .objective p {
     color: #343434;
 }
 
-.jwy_objective {
-    margin: 25px auto 0px auto;
-    font-weight: 800;
-    font-size: 270%
-}
-
 .jwy_objective_answer {
     margin: 40px auto;
-    padding: 0px 100px;
     text-align: center;
     font-size: 120%;
     font-weight: 600;
@@ -508,13 +527,13 @@ table, th, td {
     text-align: center;
 }
 
+.projectDetailBtn .btn-full {
+    margin: auto auto;
+}
+
 /* ++++++++++++++++++++++++++ */
 /* ++++ Classes Bar  +++++ */
 /* ++++++++++++++++++++++++++ */
-.Classes {
-    background-image:linear-gradient( rgba(255, 255, 255, 0.80),rgba(255, 255, 255, 0.80)), url(./img/transition_background2.jpg);
-}
-
 .Classes h3 {
     text-align: left;
     color: #555;
@@ -594,14 +613,11 @@ table, th, td {
 /* ++++++++++++++++++++++++++ */
 /* ++++++++ Visit me ++++++++ */
 /* ++++++++++++++++++++++++++ */
-.visit_me {
-    background-image:linear-gradient( rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.20)), url(./img/transition_background3.jpg);
-}
-
 .visit_me i {
     font-size: 400%;
     color: #555;
 }
+
 /* --------------------------------- */
 /* Form */
 /* --------------------------------- */
@@ -711,11 +727,12 @@ footer {
 }
 
 .ion-social-facebook,
-.ion-social-twitter,
+.ion-social-linkedin,
 .ion-social-googleplus,
-.ion-social-instagram {
-    -webkit-transition:color 0.2s;
-    transition: color 0.2s;
+.ion-social-instagram,
+.ion-social-github {
+    -webkit-transition:color 0.3s;
+    transition: color 0.3s;
 }
 
 .ion-social-facebook:hover {
