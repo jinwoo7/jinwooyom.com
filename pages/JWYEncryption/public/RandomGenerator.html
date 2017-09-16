@@ -1,0 +1,66 @@
+<html lang="en">
+    <head>
+        <title>JWY_PassHash</title>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <link rel="stylesheet" type="text/css" href="../../../vendors/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="./css/jwy_style.css">
+        <link rel="stylesheet" type="text/css" href="./css/jwy_rangen_style.css">
+        <link rel="stylesheet" type="text/css" href="./css/effects.css">
+    </head>
+    <body>
+        <div class="row menu">
+            <a href="../public/index.html">Main Menu</a>
+        </div>
+        <div class="page">
+            <h1>JWY Generator</h1>
+            <form>
+                <div class="row">
+                    <table id="inputTable">
+                        <div id="tool_uuid">
+                            <tr>
+                                <button class="btn" type="button" onclick="uuidGenerator()">Generate UUID</button>
+                            </tr>
+                        </div>
+                        <div id="tool_randomNumber">
+                            <tr>
+                                <th class="left"><label for="min">Min (Inclusive):</label></th>
+                                <td class="right">
+                                    <input id="min" type="number" autocomplete="off" placeholder="Ex. 0" autocomplete='off'>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="left"><label for="max">Max (Exclusive):</label></th>
+                                <td class="right">
+                                    <input id="max" type="number" autocomplete="off" placeholder="Ex. 100" autocomplete='off'>
+                                </td>
+                            </tr>
+                        </div>
+                        <div id="tool_randomNumber">
+                            <button class="btn" type="button" onclick="numberGenerator()">Generate Number</button>
+                        </div>
+                    </table>
+                </div>
+                <div class="row">
+                    <p>
+                        Please choose the random string you would like to generate! 
+                    </p>
+                </div>
+                <div class="row">
+                    <textarea id="resultArea" placeholder="Your Result here" readonly>
+                    </textarea>
+                </div>
+            </form>
+            <div id="snackbar"></div>
+        </div>
+        
+    </body>
+    <script src="./js/jwy_common_functions.js"></script>
+    <script src="./js/jwy_algorithms.js"></script>
+    <script src="./js/jwy_random_generator.js"></script>
+    <script>
+        console.log(uuid4());
+        
+    </script>
+    
+</html>

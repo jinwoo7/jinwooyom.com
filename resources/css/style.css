@@ -778,6 +778,22 @@ footer p {
     margin-top: 20px;
 }
 
+#encryptionLink {
+    text-decoration: none;
+    -webkit-transition:color 0.3s;
+    transition: color 0.3s;
+}
+
+#encryptionLink:link,
+#encryptionLink:visited {
+    color: #87ADDE;
+}
+
+#encryptionLink:hover,
+#encryptionLink:active {
+    color: #fff;
+}
+
 /* --------------------------------- */
 /* For Animations */
 /* --------------------------------- */
