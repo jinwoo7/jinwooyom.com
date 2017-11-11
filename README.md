@@ -1,6 +1,6 @@
 # Jinwooyom.com
-- Personal professional website that I created from scratch!
-- Made with CSS, HTML, Javascript, and PHP without any use of framework or bootstrap
+- Personal website that I have created from scratch!
+- Built using CSS, HTML, Javascript, and PHP without any use of framework or bootstrap
 - The objective of this project were:
     * to have a strong foundation in working with basic building blocks of front-end development
     * to study and develope a website and a portfolio that follows the modern UI/UX standards
