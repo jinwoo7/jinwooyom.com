@@ -6,6 +6,10 @@
     * to study and develope a website and a portfolio that follows the modern UI/UX standards
 
 ## Deployment
+- Ensure that you have docker and git installed on your machine
+```bash
+sudo apt install docker git -y
+```
 - Git clone the repo
 - Move the Dockerfile and deploy.sh out of the repo
 - Run deploy.sh
@@ -13,6 +17,7 @@
 git clone https://github.com/jinwoo7/jinwooyom.com.git
 mv jinwooyom.com/Dockerfile Dockerfile
 mv jinwooyom.com/deploy.sh deploy.sh
+chmod +x deploy.sh
 ./deploy.sh
 ```
 
@@ -20,7 +25,7 @@ mv jinwooyom.com/deploy.sh deploy.sh
 - On your host machine, pull the repo
 - Make neccessary changes
 - Git add, commit and push the changes to master branch
-- On your web server, run deploy.sh and the web page will re-deploy the website with the newest change
+- On your web server, run deploy.sh and the web page will re-deploy the website with the latest change
 
 ##  Logo
 ![alt text][logo]
