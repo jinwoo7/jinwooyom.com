@@ -5,7 +5,15 @@
     * to have a strong foundation in working with basic building blocks of front-end development
     * to study and develope a website and a portfolio that follows the modern UI/UX standards
 
-## Deployment
+## Webserver setup (ex. AWS)
+- Select a hosting platform (ex. AWS)
+> AWS Example
+> First, spin up an EC2 instance w/ standard security group + HTTP & HTTPS inbound rules
+> Second, setup the EC2 instance
+>  - Update the instance and install httpd git docker
+>  - Start docker daemon "sudo systemctl start docker"
+
+## Webapp Deployment
 - Ensure that you have docker and git installed on your machine
 ```bash
 sudo apt install docker git -y
@@ -20,6 +28,26 @@ mv jinwooyom.com/deploy.sh deploy.sh
 chmod +x deploy.sh
 ./deploy.sh
 ```
+- Now check the webserver setup using the public IP
+
+## Domain name setup (ex. Route53 w/ namecheap)
+- Select a domain provider (ex. namecheap)
+-  Purchase the domain name from the domain provider
+-  In Route53, create a public hosted zone. Name it your domain name
+1. Create an A record
+> - In the created hostedzone, create a record
+> - leave the default settings (Record type = A & simple routing)
+> - Copy over the public IP into the Value and create
+2. Create a alias for www subdomain access
+> - Create another record in the same hosted zone
+> - Put "www" as subdomain, turn on alias
+> - Set route traffic to "Alias to another record in this hosted zone"
+> - Set to your domain record created in step 1 and create
+3. Update nameservers w/ your domain provider
+- Go to your domain provider and open up nameserver manager for your domain
+- Copy over the four nameservers provided by Route53
+- Save it. Now wait until DNS propagates properly!
+
 
 ## Maintenance
 - On your host machine, pull the repo
