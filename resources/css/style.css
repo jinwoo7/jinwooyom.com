@@ -218,6 +218,18 @@ a:active {
     border-bottom: 1px solid transparent;
 }
 
+.publication-link:link,
+.publication-link:visited {
+    color: #87ADDE;
+    text-decoration: underline;
+}
+
+.publication-link:hover,
+.publication-link:active {
+    color: white;
+    text-decoration: underline;
+}
+
 /* ----- BUTTONS ------ */
 
 .btn:link,
